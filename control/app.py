@@ -7,22 +7,22 @@ import wave
 
 app = Flask(__name__, static_folder='../view', template_folder='../view/templates')
 
-@app.route("/record")
+@application.route("/record")
 def record():
     # if request.method == "POST":
     #     return redirect(url_for("upload"))
     # else: # "GET"
     return render_template("record.html")
 
-@app.route("/test")
+@application.route("/test")
 def test():
     return "test success"
 
-@app.route("/")
+@application.route("/")
 def home():
     return "HOME"
 
-@app.route("/upload", methods=["POST"])
+@application.route("/upload", methods=["POST"])
 def upload():
     if request.method == "POST":
         # print('files', request.files)
