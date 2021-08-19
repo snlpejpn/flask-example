@@ -5,7 +5,7 @@ import random
 import os
 import wave
 
-app = Flask(__name__, static_folder='../view', template_folder='../view/templates')
+application = Flask(__name__, static_folder='../view', template_folder='../view/templates')
 
 @application.route("/record")
 def record():
@@ -62,4 +62,4 @@ def upload():
 
 if __name__ == "__main__":
  # webサーバーの立ち上げ
-    app.run(use_reloader=False, debug=True)
+    application.run(use_reloader=False, debug=True)
